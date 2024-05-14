@@ -1,5 +1,8 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
+import CityProvider from "./context/cityProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,7 +14,26 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <CityProvider>
+          <div className=" sm:h-screen flex flex-col">
+            <NavBar />
+            <div 
+              style={{
+                backgroundImage: `url('/bg.png')`,
+                height: "auto",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+                opacity:''
+              }}
+            >
+              {children}
+            </div>
+
+            <Footer />
+          </div>
+        </CityProvider>
+      </body>
     </html>
   );
 }

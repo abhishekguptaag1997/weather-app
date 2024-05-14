@@ -1,0 +1,22 @@
+ 
+/* Chrome, Edge, and Safari */
+::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(104, 108, 109, 0.562);
+  border-radius: 0.4rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(30, 30, 8);
+  border-radius: 0.4rem;
+  border: 3px solid rgb(52, 52, 56);
+  width: 0.2rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(30, 30, 8);
+  border: 3px solid rgb(219, 219, 228);
+}
